@@ -3,15 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*index*/
 header{
     width: 100%;
 }
+/* Index logo y nav*/
 .fondologo{
     height: 150px;
     width: 100%;
     background-color: #c0e6de;
 }
-.logo{ /*Index*/
+.logo{
     width: 100%;
     height: 100%;
     background-image: url(../Fotos/Logo.png);
@@ -58,7 +60,8 @@ header{
     background-size: 100% 100%;
     background-position-x: left;
 }
-
+/*Index contenido*/
+/*Casurel index*/
 .mainfotos{
     margin-left: auto;
     margin-right: auto;
@@ -81,6 +84,7 @@ header{
     margin-bottom: 25px;
 
 }
+/*Miniaturas menu index*/
 #menufotos{
     justify-content: center;
     width: 620px;
@@ -131,6 +135,8 @@ header{
 #menufotos #imagenes:hover figcaption{
     display: block;
 }
+/*Conocenos*/
+/*Texto conocenos*/
 #cajaconocenos{
     width: 1200px;
     height: 420px;
@@ -152,13 +158,35 @@ header{
     color:#3d348b;
     padding-bottom: 30px;
 }
+/*Caja de trabajadores*/
 .cajapersonas{
     width: 800px;
     height: 400px;
-    border-left: 15px solid white;
+    border: 1px solid #3d348b1e;
+    border-radius: 82px;
+    background: #e0e0e0;
+    box-shadow:  19px 19px 38px #929292,
+                 -19px -19px 38px #ffffff;
 }
 #personas1{
+    margin: auto;
     background-image:url(../Fotos/Pers1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#personas2{
+    margin: auto;
+    background-image:url(../Fotos/Pers2.jpg);
+    background-size: cover;
+    background-position: center;
+}#personas3{
+    margin: auto;
+    background-image:url(../Fotos/Pers3.jpg);
+    background-size: cover;
+    background-position: center;
+}#personas4{
+    margin: auto;
+    background-image:url(../Fotos/Pers4.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -168,20 +196,28 @@ header{
     padding-top: 320px;
     color: #c0e6de;
 }
-#personas2{
-    background-image:url(../Fotos/Pers2.jpg);
-    background-size: cover;
-    background-position: center;
-}#personas3{
-    background-image:url(../Fotos/Pers3.jpg);
-    background-size: cover;
-    background-position: center;
-}#personas4{
-    background-image:url(../Fotos/Pers4.jpg);
-    background-size: cover;
-    background-position: center;
-    border-right: 15px solid white;
+/*Paginas ropas y accesorios*/
+main h2{
+    text-align: center;
+    padding: 20px;
+    font: 50px verdana bold;
+    color: #3D348B;
 }
+.btn-success{
+    width: 150px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.favorite{
+    background-color: rgb(0, 165, 0);
+    border-radius: 10px;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+/*Pagina Ubicanos*/
 .Ubicanos h3{
     text-align: center;
 }
@@ -203,13 +239,7 @@ header{
     width:100%;
     height: 100%;
 }
-main h2{
-    text-align: center;
-    padding: 20px;
-    font: 50px verdana bold;
-    color: #3D348B;
-}
-
+/*Fotter*/
 .fondofotter{
     height: 550px;
     background-color: #624763;
@@ -223,7 +253,41 @@ main h2{
     height: 200px;
     color: #c0e6de;
 }
+.form{
+    margin-top: 35px;
+}
+.input-group{
+
+    position: relative;
+}
+label{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px,10px);
+    transform-origin: left;
+    transition: transform .25s;
+}
+#name{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    color: #fff;
+    background-color: transparent;
+    outline: 2px solid #fff;
+}
+.input-group:focus-within label {
+    transform: translate(0, -30px) scale(0.8);
+    color: #d1c5fc;
+}
+.input-group:focus-within #name{
+    outline-color: #d1c5fc;
+}
 #boton{
+    margin-top: 10px;
     float: right;
 }
 .linksfotter{
@@ -278,6 +342,11 @@ main h2{
     font-size: 15px;    
 }
 
+
+
+
+
+/*Responsive*/
 @media only screen and (min-width: 320px) and (max-width:767px){
     .mainfotos{
         width: 90%;
