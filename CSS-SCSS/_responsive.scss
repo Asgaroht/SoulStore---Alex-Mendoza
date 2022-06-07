@@ -1,0 +1,307 @@
+@media only screen and (min-width: 320px) and (max-width:767px){
+    .mainfotos{
+        width: 90%;
+    }
+    #menufotos{
+        justify-content:center;
+        width: 300px;
+        margin:0px;
+        margin-top: 50px;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    #cajaconocenos{
+        width: auto;
+        height: 460px;
+        padding-left: 25px;
+        padding-right: 25px;
+        p{
+            font: 10px/15px verdana; 
+        }
+    }
+    .cajapersonas{
+        width: 300px;
+        height: 150px;
+        border-left: 5px solid $color6;
+        p{
+            font-size: 15px;
+            padding-top: 125px;
+        }
+    }
+    #personas4{
+        border-right: 5px solid $color6;
+    }
+    .tienda{
+        h5{
+            padding-left: 10px;
+            padding: 10px;
+            font-size: 30px;
+            margin-right: 0px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+    .card-img-top{
+        padding-top:10px; 
+        min-height:300px; 
+        max-height: 300px
+    }
+    .mapa{
+        margin-left:10px;
+        border: 3px solid $color4;
+        width:300px;
+        height: 500px;
+    }
+    .formulario{
+        margin-left: 0px;
+        margin-top:-50px;
+        padding: 50px;
+        width: 320px;
+        height: 400px;
+        color: $color1;
+    }
+    .linksfotter{
+        margin-right: 0px;
+        width: 320px;
+        height: 400px;
+        margin-top: 0px;
+        padding: 0px;
+        padding-left: 50px;
+        color: $color1;
+    }
+    .fondofotter{
+        height: calc(100vh - 50px);
+        background-color: $color5;
+    }
+    #container{
+        div {
+            display: flex;
+            margin-top: 400px;
+            div {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:1023px){
+    .mainfotos{
+        width: 90%;
+    }
+    #cajaconocenos{
+        width: auto;
+        height: 350px;
+        padding-left: 50px;
+        padding-right: 50px;
+        p{
+            font: 15px/20px verdana;    
+        }
+    }
+    .cajapersonas{
+        width: 400px;
+        height: 200px;
+        border-left: 10px solid $color6;
+        p{
+            font-size: 25px;
+            padding-top: 160px;
+        }
+    }
+    #personas4{
+        border-right: 10px solid $color6;
+    }
+    #fotofondo{
+        width: 100%;
+    }
+    .tienda{
+        h5{
+            padding: 15px;
+            padding-left: 25px;
+            font-size: 30px;
+            margin-right: 0px;
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .card-img-top{
+        padding-top:10px; 
+        min-height:450px; 
+        max-height: 450px
+    }
+    .mapa{
+        margin-left:25px;
+        width: 718px;
+        height: 500px;
+    }
+    .formulario{
+        margin-left: 0px;
+        margin-top:-50px;
+        padding: 50px;
+        width: 400px;
+        height: 400px;
+        color: $color1;
+    }
+    .linksfotter{
+        margin-right: 25px;
+        width: 320px;
+        height: 400px;
+        margin-top: 0px;
+        padding: 0px;
+        padding-left: 50px;
+        color: $color1;
+    }
+    .fondofotter{
+        height: calc(100vh - 700px);
+        background-color: $color5;
+    }
+    #container{
+        div {
+            display: flex;
+            margin-top: 80px;
+            div {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1024px)and (max-width:1439px){
+    .mainfotos{
+        width: 90%;
+    }
+    #cajaconocenos{
+        width: auto;
+        height: 420px;
+        padding-left: 50px;
+        padding-right: 50px;
+        p{
+            font: 20px/25px verdana;    
+        }
+    }
+    .cajapersonas{
+        width: 400px;
+        height: 200px;
+        border-left: 10px solid $color6;
+        p{
+            font-size: 25px;
+            padding-top: 160px;
+        }
+    }
+    #personas4{
+        border-right: 10px solid $color6;
+    }
+    .tienda{
+        h5{
+            padding: 15px;
+            padding-left: 25px;
+            font-size: 30px;
+            margin-right: 0px;
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .card-img-top{
+        padding-top:10px; 
+        min-height:380px; 
+        max-height: 380px;
+    }
+    .mapa{
+        margin-left:25px;
+        width: 974px;
+        height: 500px;
+    }
+    .formulario{
+        margin-left: 100px;
+        margin-top:-50px;
+        padding: 50px;
+        width: 400px;
+        height: 400px;
+        color: $color1;
+    }
+    .linksfotter{
+        margin-right: 150px;
+        width: 320px;
+        height: 400px;
+        margin-top: 0px;
+        padding: 0px;
+        padding-left: 50px;
+        color: $color1;
+    }
+    .fondofotter{
+        height: calc(100vh - 650px);
+        background-color: $color5;
+    }
+    #container{
+        div {
+            display: flex;
+            margin-top: 80px;
+            div {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1440px){
+    .mainfotos{
+        width: 90%;
+    }
+    .img{
+        width: 283px;
+        height: 180px;
+        display: inline-block;
+        margin-left: 25px;
+        margin-bottom: 25px;
+    
+    }
+    .tienda{
+        h5{
+            padding: 25px;
+            padding-left: 25px;
+            font-size: 30px;
+            margin-right: 0px;
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .card-img-top{
+        padding-top:10px; 
+        min-height:400px; 
+        max-height: 400px;
+    }
+    .mapa{
+        margin:auto;
+        width: 90%;
+        height: 500px;
+    }
+    .formulario{
+        margin-left: 150px;
+        margin-top:-50px;
+        padding: 50px;
+        width: 500px;
+        height: 400px;
+        color: $color1;
+    }
+    .linksfotter{
+        margin-right: 300px;
+        width: 320px;
+        height: 400px;
+        margin-top: 0px;
+        padding: 0px;
+        padding-left: 50px;
+        color: $color1;
+    }
+    .fondofotter{
+        height:650px;
+        background-color: $color5;
+    }
+    #container{
+        div {
+            display: flex;
+            margin-top: 80px;
+            div {
+                margin-left: 10px;
+            }
+        }
+    }
+}
