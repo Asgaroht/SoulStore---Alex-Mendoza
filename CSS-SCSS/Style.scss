@@ -10,19 +10,21 @@ $color6:white;
     padding: 0;
     box-sizing: border-box;
 }
+@mixin sizes ($height, $width, $bcolor){ 
+    height: $height;
+    width: $width;
+    background-color: $bcolor;
+}
 /*index*/
 header{
     width: 100%;
 }
 /* Index logo y nav*/
 .fondologo{
-    height: 150px;
-    width: 100%;
-    background-color: $color1;
+    @include sizes(150px,100%,$color1);
 }
 .logo{
-    width: 100%;
-    height: 100%;
+    @include sizes(100%,100%,none);
     background-image: url(../Fotos/Logo.png);
     margin-left: auto;
     margin-right: auto;
@@ -76,9 +78,8 @@ header{
 }
 .carousel-inner{
     #portadas{
+        @include sizes(100%,100%,none);
         border: 20px solid $color2;
-        width: 100%;
-        height: 100%;
     }
 }
 /*Miniaturas menu index*/
@@ -88,9 +89,8 @@ header{
     margin: auto;
 }
 .img{
+    @include sizes(250px,250px,none);
     border: 2px solid $color5;
-    width: 250px;
-    height: 150px;
     display: inline-block;
     margin-left: 25px;
     margin-bottom: 25px;
@@ -99,24 +99,23 @@ header{
         transition: 1s;
     }
 }
-.img1{
+.img-1{
     background-image: url(../Fotos/Logo.png);
     background-size: cover;
     background-position: center;
     
 }
-.img2{
+.img-2{
     background-image: url(../Fotos/MinRopa.jpg);
     background-size: cover;
     background-position: center;
-    
 }
-.img3{
+.img-3{
     background-image: url(../Fotos/MinAccesorios.jpg);
     background-size: cover;
     background-position: center;
 }
-.img4{
+.img-4{
     background-image: url(../Fotos/MinTienda.jpg);
     background-size: cover;
     background-position: center;
@@ -129,11 +128,9 @@ header{
 #menufotos{
     #imagenes{
         figcaption{
+            @include sizes(100%,100%,rgba(0,0,0,0.4));
             display: none;
             position:absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
             text-align: center;
             padding: 50px;
             font: 25px/50px verdana bold;
@@ -149,11 +146,10 @@ header{
 /*Conocenos*/
 /*Texto conocenos*/
 #cajaconocenos{
-    width: 1200px;
-    height: 420px;
+    @include sizes(420px,1200px,none);
     margin: auto;
     text-align: center;
-    h3{
+    h2{
         font: 30px verdana bold;
         color:$color4;
     }
@@ -163,7 +159,7 @@ header{
     }
 }
 #textomiembros {
-    h3{
+    h2{
         text-align: center;
         font: 30px verdana bold;
         color:$color4;
@@ -172,35 +168,31 @@ header{
 }
 /*Caja de trabajadores*/
 .cajapersonas{
-    width: 800px;
-    height: 400px;
+    @include sizes(400px,800px,none);
     border: 1px solid $color4;
     border-radius: 82px;
     background: #e0e0e0;
     box-shadow:  19px 19px 38px #929292,
-                 -19px -19px 38px #ffffff;
+                -19px -19px 38px #ffffff;
+}
+.pers{
+    margin: auto;
+    background-size: cover;
+    background-position: center;
 }
 #personas1{
-    margin: auto;
+    @extend .pers;
     background-image:url(../Fotos/Pers1.jpg);
-    background-size: cover;
-    background-position: center;
 }
 #personas2{
-    margin: auto;
+    @extend .pers;
     background-image:url(../Fotos/Pers2.jpg);
-    background-size: cover;
-    background-position: center;
 }#personas3{
-    margin: auto;
+    @extend .pers;
     background-image:url(../Fotos/Pers3.jpg);
-    background-size: cover;
-    background-position: center;
 }#personas4{
-    margin: auto;
+    @extend .pers;
     background-image:url(../Fotos/Pers4.jpg);
-    background-size: cover;
-    background-position: center;
 }
 .cajapersonas {
     p{
@@ -210,9 +202,45 @@ header{
         color: $color1;
     }
 }
+.redes{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+$redes:(
+    twitter: #51aff8,
+    facebook: #2956a3,
+	instagram: #fa4e02,
+	youtube: #ce1312,
+);
+@each $red, $color in $redes {
+    .red-#{$red} {
+        background: $color;
+        width: 24%;
+        height: 100px;
+        line-height: 100px;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: $color6;
+        text-align: center;
+        display: inline-block;
+        border-radius: 30px;
+        .link{
+            text-decoration: none;
+            color: $color6;
+        }
+        &:hover {
+            background-color: $color3;
+            background-size: cover;
+            background-position: center;
+            text-shadow: 0px 0px 5px $color6;
+            color: $color;
+        }
+    }
+}
+
 /*Paginas ropas y accesorios*/
 main {
-    h2{
+    h1{
         text-align: center;
         padding: 20px;
         font: 50px verdana bold;
@@ -230,15 +258,13 @@ main {
     margin-right: 10px;
 }
 .icono{
+    @include sizes(1em,1em, #00a81c);
     display: grid;
     justify-content: center;
-    width: 1em;
-    height: 1em;
     color: rgb(207, 207, 207);
     font-size: 2.5em;
     padding: 10px;
     border-radius: 10px;
-    background: #00a81c;
     box-shadow: 12px 12px 24px #36e980, -12px -12px 24px #73e969;
 }
 .corazon{
@@ -257,12 +283,12 @@ main {
 }
 /*Pagina Ubicanos*/
 .Ubicanos{
-    h3{
+    h2{
         text-align: center;
     }
 }
 .tienda{
-    h5{
+    h4{
         padding-left: 50px;
         padding: 50px;
         font-size: 25px;
@@ -287,12 +313,11 @@ main {
     background-color: $color5;
 }
 .formulario{
+    @include sizes(200px,600px,none);
     margin-left: 20px;
     display: inline-block;
     margin-top:-50px;
     padding: 50px;
-    width: 600px;
-    height: 200px;
     color: $color1;
 }
 .form{
@@ -337,10 +362,9 @@ label{
     float: right;
 }
 .linksfotter{
+    @include sizes(400px,400px,none);
     margin-right: 20px;
     float: right;
-    width: 400px;
-    height: 400px;
     margin-top:-50px;
     padding: 50px;
     color: $color1;
@@ -356,8 +380,7 @@ label{
     background-color: $color5;
     display: flex;
     #pagos{
-        width: 80px;
-        height: 40px;
+        @include sizes(40px,80px,none);
         margin-left: 50px;
     }
 }
@@ -369,12 +392,10 @@ label{
         display: flex;
         margin-top: 250px;
         div{
-            width: 80px;
-            height: 40px;
+            @include sizes(40px,80px,none);
             margin-left: 20px;
             #pagos{
-                width: 80px;
-                height: 40px;
+                @include sizes(40px,80px,none)
             }
         }
     }
