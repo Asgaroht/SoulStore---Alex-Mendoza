@@ -9,6 +9,18 @@
     <title>Tienda SOUL</title>
     <meta name="description=" content="Soul es una tienda de ropa y joyeria tanto para hombres como mujeres.">
     <meta name="keywords" content="HTML, CSS, BOOSTTRAP, CAROUSEL">
+    <script type="text/javascript">
+      var _smartsupp = _smartsupp || {};
+      _smartsupp.key = '7ef4113df555f52a36ac273b4dbc04927f9730db';
+      _smartsupp.offsetX =25;
+      _smartsupp.offsetY =25;
+      window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+      })(document);
+    </script>
 </head>
 <body class="Fondototal">
     <header>
@@ -34,13 +46,11 @@
             </li>
           </ul>
         </nav>
-
     </header>
     <br>
     <main>
         <div class="mainfotos">
             <div id="demo" class="carousel slide " data-ride="carousel">
-
                 <!-- Indicators -->
                 <ul class="carousel-indicators ">
                   <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -48,7 +58,6 @@
                   <li data-target="#demo" data-slide-to="2"></li>
                   <li data-target="#demo" data-slide-to="3"></li>
                 </ul>
-              
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                   <div class="carousel-item active ">
@@ -64,7 +73,6 @@
                     <img id="portadas" src="Fotos/Port4.jpg" alt="Portada4">
                   </div>
                 </div>
-              
                 <!-- Left and right controls -->
                 <a class="carousel-control-prev" href="#demo" data-slide="prev">
                   <span class="carousel-control-prev-icon"></span>
@@ -87,14 +95,16 @@
         <div class="formulario">
           <H5>ÚNETE A NUESTRA LISTA DE CORREOS</H5><br>
           <P>Subscribete para estar enterada de nuestas promociones y lanzamientos de productos.</P>
-          <div class="form">
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="name">
+          <form action="" method="POST" netlify>
+            <div class="form">
+              <div class="input-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="name" name="Email">
+              </div>
+              <button id="boton" type="submit" class="btn btn-primary" value="Enviar">Enviar</button>
             </div>
-            <button id="boton" type="submit" class="btn btn-primary">Enviar</button>
-            </div>
-          </div>
+          </form>
+        </div>
         <div class="linksfotter">
           <h5>SOPORTE</h5><br>
           <a href="">Politicas de Envios y Tarifas</a><br><br>

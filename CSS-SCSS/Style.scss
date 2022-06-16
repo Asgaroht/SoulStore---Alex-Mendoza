@@ -146,20 +146,20 @@ header{
 /*Conocenos*/
 /*Texto conocenos*/
 #cajaconocenos{
-    @include sizes(420px,1200px,none);
+    @include sizes(550px,1200px,none);
     margin: auto;
     text-align: center;
-    h2{
+    h3{
         font: 30px verdana bold;
         color:$color4;
     }
     p{
-        font: 20px/30px verdana;
+        font: 25px/37px verdana;
         color:$color4;
     }
 }
 #textomiembros {
-    h2{
+    h3{
         text-align: center;
         font: 30px verdana bold;
         color:$color4;
@@ -197,9 +197,9 @@ header{
 .cajapersonas {
     p{
         font-size: 50px;
-        text-align: center;
         padding-top: 320px;
         color: $color1;
+        text-align: center;
     }
 }
 .redes{
